@@ -17,9 +17,9 @@
 import functools
 import tensorflow as tf
 
-from deeplab.core import xception
-from nets.mobilenet import mobilenet as mobilenet_lib
-from nets.mobilenet import mobilenet_v2
+from core import xception
+#from nets.mobilenet import mobilenet as mobilenet_lib
+#from nets.mobilenet import mobilenet_v2
 
 
 slim = tf.contrib.slim
@@ -67,13 +67,13 @@ def _mobilenet_v2(net,
 
 # A map from network name to network function.
 networks_map = {
-    'mobilenet_v2': _mobilenet_v2,
+#    'mobilenet_v2': _mobilenet_v2,
     'xception_65': xception.xception_65,
 }
 
 # A map from network name to network arg scope.
 arg_scopes_map = {
-    'mobilenet_v2': mobilenet_v2.training_scope,
+#    'mobilenet_v2': mobilenet_v2.training_scope,
     'xception_65': xception.xception_arg_scope,
 }
 

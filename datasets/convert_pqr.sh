@@ -53,5 +53,5 @@ python ./build_pqr_data.py \
   --image_folder="${IMAGE_FOLDER}" \
   --semantic_segmentation_folder="${SEMANTIC_SEG_FOLDER}" \
   --list_folder="${LIST_FOLDER}" \
-  --image_format="jpg" \
+  --image_format="jpeg" \
   --output_dir="${OUTPUT_DIR}"

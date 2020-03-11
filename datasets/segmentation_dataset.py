@@ -105,11 +105,24 @@ _ADE20K_INFORMATION = DatasetDescriptor(
 )
 
 
+_PQR_SEG_INFORMATION = DatasetDescriptor(
+    splits_to_sizes={
+        'train': 101, # number of files in the train folder
+        'trainval': 127,
+        'val': 26,
+    },
+    num_classes=2, # number of classes in your dataset
+    ignore_label=255, # white edges that will be ignored to be class
+)
+
+
 _DATASETS_INFORMATION = {
     'cityscapes': _CITYSCAPES_INFORMATION,
     'pascal_voc_seg': _PASCAL_VOC_SEG_INFORMATION,
     'ade20k': _ADE20K_INFORMATION,
+    'pqr': _PQR_SEG_INFORMATION
 }
+
 
 # Default file pattern of TFRecord of TensorFlow Example.
 _FILE_PATTERN = '%s-*'

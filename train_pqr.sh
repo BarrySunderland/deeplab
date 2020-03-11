@@ -20,7 +20,6 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:$WD/slim
 CURRENT_DIR=$(pwd)
 WORK_DIR="${CURRENT_DIR}/deeplab"
 
-
 DATASET_DIR="datasets"
 
 # Set up the working directories.
@@ -69,7 +68,7 @@ python "${WORK_DIR}"/train.py \
   --save_summaries_secs="${SAVE_SUM}" \
   --train_logdir="${TRAIN_LOGDIR}" \
   --dataset_dir="${MY_DATASET}"
-  #--tf_initial_checkpoint="${INIT_FOLDER}/deeplabv3_pascal_train_aug/model.ckpt" \
-  #--tf_initial_checkpoint="${TRAIN_LOGDIR}/model.ckpt-50" \
-  # --initialize_last_layer=False \
-  # --last_layers_contain_logits_only=True \
+  --tf_initial_checkpoint="${INIT_FOLDER}/deeplabv3_pascal_train_aug/model.ckpt" \
+#  --tf_initial_checkpoint="${TRAIN_LOGDIR}/model.ckpt-50" \
+   --initialize_last_layer=False \
+   --last_layers_contain_logits_only=False \
