@@ -44,8 +44,8 @@ mkdir -p "${WORK_DIR}/${DATASET_DIR}/${PQR_FOLDER}/exp"
 mkdir -p "${TRAIN_LOGDIR}"
 
 # Train 10 iterations.
-NUM_ITERATIONS=5
-LOG_STEPS=1
+NUM_ITERATIONS=2000
+LOG_STEPS=10
 SAVE_INT=7200
 SAVE_SUM=7200
 python "${WORK_DIR}"/train.py \
